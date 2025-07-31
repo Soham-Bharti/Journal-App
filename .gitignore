@@ -1,0 +1,65 @@
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Java & Spring Boot
+/target/
+/bin/
+/build/
+
+# Logs
+*.log
+
+# Environment & config
+.env
+application.properties
+application.yml
+application-local.properties
+
+# IntelliJ IDEA
+*.iml
+.idea/
+out/
+
+# Eclipse
+.settings/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Maven Wrapper
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.ipr
+
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
