@@ -10,9 +10,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.HTML;
-import java.util.List;
-
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -36,7 +33,7 @@ public class UserController {
         if(userInDb != null){
             userInDb.setUserName(!user.getUserName().equals("") ? user.getUserName() : userInDb.getUserName());
             userInDb.setPassword(!user.getPassword().equals("") ? user.getPassword() : userInDb.getPassword());
-            userService.saveEntry(userInDb);
+            userService.saveUser(userInDb);
             return new ResponseEntity<>(HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);

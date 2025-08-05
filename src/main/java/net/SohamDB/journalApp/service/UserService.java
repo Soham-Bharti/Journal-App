@@ -1,8 +1,6 @@
 package net.SohamDB.journalApp.service;
 
-import net.SohamDB.journalApp.entity.JournalEntry;
 import net.SohamDB.journalApp.entity.User;
-import net.SohamDB.journalApp.repository.JournalEntryRepository;
 import net.SohamDB.journalApp.repository.UserRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,13 +19,12 @@ public class UserService {
 
     private static final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
-    public void saveEntry(User user){
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
-        userRepository.save(user);
-    }
     public void saveNewUser(User user){
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setRoles(Arrays.asList("USER"));
+        userRepository.save(user);
+    }
+    public void saveUser(User user){
         userRepository.save(user);
     }
 
